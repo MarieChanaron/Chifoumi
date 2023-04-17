@@ -30,6 +30,8 @@ public class JeuServlet extends HttpServlet {
         session.setAttribute("points", points);
         session.setAttribute("partie", partie);
 
+        System.out.println(points);
+
         if (points.get("utilisateur").equals(3) || points.get("ordinateur").equals(3)) {
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/resultat.jsp");
             dispatcher.forward(request, response);

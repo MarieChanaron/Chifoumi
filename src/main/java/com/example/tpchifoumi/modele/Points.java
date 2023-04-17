@@ -8,24 +8,24 @@ public class Points {
 
     Points(Choix choix) {
         switch (choix.utilisateur) {
-            case "Pierre":
-                if (choix.ordinateur.equals("Feuille")) {
+            case "pierre":
+                if (choix.ordinateur.equals("feuille")) {
                     this.ordinateur += 1;
-                } else if (choix.ordinateur.equals("Ciseaux")) {
+                } else if (choix.ordinateur.equals("ciseaux")) {
                     this.utilisateur += 1;
                 }
                 break;
-            case "Feuille":
-                if (choix.ordinateur.equals("Pierre")) {
+            case "feuille":
+                if (choix.ordinateur.equals("pierre")) {
                     this.utilisateur += 1;
-                } else if (choix.ordinateur.equals("Ciseaux")) {
+                } else if (choix.ordinateur.equals("ciseaux")) {
                     this.ordinateur += 1;
                 }
                 break;
-            case "Ciseaux":
-                if (choix.ordinateur.equals("Pierre")) {
+            case "ciseaux":
+                if (choix.ordinateur.equals("pierre")) {
                     this.ordinateur += 1;
-                } else if (choix.ordinateur.equals("Feuille")) {
+                } else if (choix.ordinateur.equals("feuille")) {
                     this.utilisateur += 1;
                 }
                 break;
