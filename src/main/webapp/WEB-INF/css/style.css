@@ -49,6 +49,12 @@ h1 {
     cursor: pointer;
     margin: 40px;
     box-shadow: -2px -4px 4px rgba(255, 255, 255, 0.05), 2px 4px 4px rgba(0, 0, 0, 0.35);
+    position: relative;
+}
+
+.button:hover{
+    bottom: 2px;
+    transition: 0.2s ease-in-out;
 }
 
 form {
@@ -106,5 +112,10 @@ p {
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+.icon:hover{
+    transform: scale(1.07);
+    transition: 0.2s ease-in-out;
 }
 

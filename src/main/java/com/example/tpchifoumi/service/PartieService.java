@@ -26,18 +26,18 @@ public class PartieService {
         if (totalPoints.get("ordinateur") == null) {
             PartieService.totalPoints.put("ordinateur", partie.getPoints().getOrdinateur());
         } else {
-            Integer ptsUtil = totalPoints.get("ordinateur") + partie.getPoints().getOrdinateur();
-            PartieService.totalPoints.replace("ordinateur", ptsUtil);
+            Integer ptsOrdi = totalPoints.get("ordinateur") + partie.getPoints().getOrdinateur();
+            PartieService.totalPoints.replace("ordinateur", ptsOrdi);
         }
 
         return partie;
     }
 
     public static Map<String, Integer> getTotalPoints() {
-        return totalPoints;
+        return PartieService.totalPoints;
     }
 
     public static void clearList() {
-        totalPoints.clear();
+        PartieService.totalPoints.clear();
     }
 }
