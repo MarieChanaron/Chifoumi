@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(180deg, #CB2C6F 0%, #F7450D 100%);
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+body > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    flex-basis: 10%;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    flex-basis: 10%;
+}
+
+h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 58px;
+}
+
+.button {
+    border: none;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 24px;
+    color: #D43A0A;
+    border-radius: 20px;
+    width: 208px;
+    height: 53px;
+    cursor: pointer;
+    margin: 40px;
+    box-shadow: -2px -4px 4px rgba(255, 255, 255, 0.05), 2px 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+form {
+    height: 305px;
+    width: 708px;
+    position: relative;
+}
+
+form button:first-child {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+form button:last-child {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+button[value="ciseaux"] {
+    position: relative;
+    bottom: 40px;
+}
+
+table {
+    font-family: 'Mandali', sans-serif;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.49);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+thead {
+    font-size: 110%;
+}
+
+td {
+    width: 200px;
+}
+
+p {
+    font-family: 'Mandali', sans-serif;
+    text-align: center;
+    font-size: 24px;
+}
+
+#resultat {
+    flex-direction: column;
+    grid-gap: 60px;
+}
+
+.icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
