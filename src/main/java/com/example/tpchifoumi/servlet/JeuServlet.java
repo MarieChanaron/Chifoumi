@@ -27,10 +27,13 @@ public class JeuServlet extends HttpServlet {
         Map<String, Integer> points = PartieService.getTotalPoints();
 
         HttpSession session = request.getSession();
-        session.setAttribute("points", points);
+        session.setAttribute("choix", partie.getChoix());
         session.setAttribute("partie", partie);
+        session.setAttribute("totalPoints", points);
 
-        System.out.println(points);
+        if (points.get("utilisateur") == 3 || points.get("ordinateur") == 3) {
+            session.setAttribute("fin", true);
+        }
 
         if (points.get("utilisateur").equals(3) || points.get("ordinateur").equals(3)) {
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/resultat.jsp");

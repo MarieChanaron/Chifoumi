@@ -33,17 +33,18 @@
         </thead>
         <tbody>
         <tr>
-            <td><img src="images?file=${partie.getChoix().getUtilisateur()}.png" alt="${partie.getChoix().getUtilisateur()}"></td>
+            <td><img src="images?file=${choix.getUtilisateur()}.png" alt="${choix.getUtilisateur()}"></td>
             <td></td>
-            <td><img src="images?file=${partie.getChoix().getOrdinateur()}.png" alt="${partie.getChoix().getOrdinateur()}"></td>
+            <td><img src="images?file=${choix.getOrdinateur()}.png" alt="${choix.getOrdinateur()}"></td>
         </tr>
         <tr>
-            <td><c:out value="${points.get('utilisateur')} point(s)" /></td>
+            <td><c:out value="${totalPoints.get('utilisateur')} point(s)" /></td>
             <td></td>
-            <td><c:out value="${points.get('ordinateur')} point(s)" /></td>
+            <td><c:out value="${totalPoints.get('ordinateur')} point(s)" /></td>
         </tr>
         </tbody>
     </table>
+
 
     <c:if test="${points.get('utilisateur') < 3 && points.get('ordinateur') < 3}">
         <c:if test="${partie.getPoints().getUtilisateur() > partie.getPoints().getOrdinateur()}">
@@ -57,11 +58,11 @@
         </c:if>
     </c:if>
 
-    <c:if test="${points.get('utilisateur') == 3}">
+    <c:if test="${fin && totalPoints.get('utilisateur') == 3}">
         <p>Bravo ! Vous avez gagné la partie !</p>
     </c:if>
 
-    <c:if test="${points.get('ordinateur') == 3}">
+    <c:if test="${fin && totalPoints.get('ordinateur') == 3}">
         <p>Vous avez perdu... Voulez-vous réessayer ?</p>
     </c:if>
 </main>
