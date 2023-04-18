@@ -15,7 +15,7 @@ public class IndexServlet extends HttpServlet {
 
         // Réinitialise la liste
         HttpSession session = request.getSession();
-        if (session.getAttribute("partie") == null) {
+        if (session.getAttribute("choixUtil") == null) {
             PartieService.clearList();
         }
 

@@ -53,7 +53,7 @@ public class JeuServlet extends HttpServlet {
         String choixOrdi = partie.getChoix().getOrdinateur();
 
         HttpSession session = request.getSession();
-        session.setAttribute("partie", partie);
+        //session.setAttribute("partie", partie);
         session.setAttribute("total", total);
         session.setAttribute("fin", false);
         session.setAttribute("resultat", resultat);
